@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "Compress the svg in folder svg to compressedSvg",
   "scripts": {
-    "comp": "del -f ./compressedSvg/*.svg && svgo -f ./svg -o ./compressedSvg",
-    "clean": "del -f ./svg/*.svg && del -f ./compressedSvg/*.svg"
+    "comp": "npm run cleanDest && svgo -f ./svg -o ./compressedSvg",
+    "compBase64": "npm run cleanDest && svgo -f ./svg -o ./compressedSvg --datauri base64",
+    "compUriEncoded": "npm run cleanDest && svgo -f ./svg -o ./compressedSvg --datauri encoded",
+    "compUriUnencoded": "npm run cleanDest && svgo -f ./svg -o ./compressedSvg --datauri unencoded",
+    "clean": "npm run cleanSource && npm run cleanDest",
+    "cleanDest": "del -f ./compressedSvg/*.svg",
+    "cleanSource": "del -f ./svg/*.svg"
   },
   "keywords": [
     "svg",
