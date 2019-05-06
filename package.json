@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Compress the svg in folder svg to compressedSvg",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "comp": "svgo -f ./svg -o ./compressedSvg"
+    "comp": "del -f ./compressedSvg/*.svg && svgo -f ./svg -o ./compressedSvg",
+    "clean": "del -f ./svg/*.svg && del -f ./compressedSvg/*.svg"
   },
   "keywords": [
     "svg",
@@ -16,6 +16,7 @@
   "author": "dmetzler1988",
   "license": "ISC",
   "devDependencies": {
+    "del-cli": "^1.1.0",
     "svgo": "^1.2.2"
   }
 }
