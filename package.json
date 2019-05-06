@@ -1,0 +1,21 @@
+{
+  "name": "svgCompressor",
+  "version": "1.0.0",
+  "description": "Compress the svg in folder svg to compressedSvg",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "comp": "svgo -f ./svg -o ./compressedSvg"
+  },
+  "keywords": [
+    "svg",
+    "compressor",
+    "svg",
+    "compress",
+    "compressor"
+  ],
+  "author": "dmetzler1988",
+  "license": "ISC",
+  "devDependencies": {
+    "svgo": "^1.2.2"
+  }
+}
